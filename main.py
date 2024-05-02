@@ -7,7 +7,8 @@ if plan == 0:
     print("Подходящего факультета нет")
 else:
     for direct in directions:
-        print("\nНаправление: ", direct, end="\n")
+        print("\nФакультет/Институт: ", dict_dec[direct]["Факультет/Институт"], end="\n")
+        print("Направление: ", direct, end="\n")
 
         if plan == "Платное":
             print("Цена за год: ", dict_dec[direct][plan]["Цена"], end="\n")
