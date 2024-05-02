@@ -1,6 +1,6 @@
 from def_only_physics import only_physics
 from def_only_it import only_it
-from def_physics_and_math import physics_it
+from def_physics_and_it import physics_it
 
 
 def decisions():
