@@ -25,7 +25,6 @@ def decisions():
         return direction
 
     summary = rus + math + it + physics
-    print("\nОбщая сумма баллов: ", summary, end="\n")
 
     while True:
         print("\nВыберите в какой сфере программирование вас интересует:\n"
@@ -54,9 +53,14 @@ def decisions():
         print("\nОшибка: выбран элемент не из списка, попробуйте ещё раз\n")
 
     if it == 0:
+        print("\nОбщая сумма баллов: ", summary, end="\n")
         return only_physics(rus, math, physics, summary, sphere, plan)
     if physics == 0:
+        print("\nОбщая сумма баллов: ", summary, end="\n")
         return only_it(rus, math, it, summary, sphere, plan)
+
+    print("\nОбщая сумма баллов (без физики): ", summary-physics, end="\n")
+    print("\nОбщая сумма баллов (без информатики): ", summary - it, end="\n")
 
     return physics_it(rus, math, it, physics, summary, sphere, plan)
 
